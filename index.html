@@ -1,19 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <h1>숫자 맞추기 게임</h1>
-    <div id="notify-area">1~99사이 숫자를 입력하세요</div>
-    <div id="chances">잔여 기회 : 5회</div>
-    <input type="number" id="input-area" placeholder="1~99 사이의 값을 입력 " required/>
-    <button id="btn-start">Go</button>
-    <button id="btn-reset">초기화</button>
-    
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="pre-title">못 맞추면 마시는거다</h1>
+      <h1 class="title">술 게임</h1>
+      <h1 class="sub-title">숫자 맞추기 게임</h1>
+      <div id="notify-area">
+        <img src="https://media1.giphy.com/media/9DinPR8bzFsmf74j9W/giphy.gif" class="main-img"/>
+        <h2>1~100사이 숫자를 입력하세요</h2>
+      </div>
+      <h2 id="chances">잔여 기회 : 5회</h2>
+      <input
+        type="number"
+        id="input-area"
+        placeholder="1~100 사이의 값을 입력 "
+        class="form-control mb-10"
+        required
+      />
+      <button class="btn btn-success mb-2 button-style" id="btn-start">Go</button>
+      <button id="btn-reset">초기화</button>
+    </div>
+
     <script src="main.js"></script>
-</body>
+  </body>
 </html>

@@ -32,7 +32,7 @@ randomNumber(); // 함수 호출할 때는 () 꼭 붙여줄 것
 
 
 function randomNumber() {
-    computerNum = Math.floor(Math.random() * 100);
+    computerNum = Math.floor(Math.random() * 100) + 1;
     // Math.random()은 0이상 1미만의 수를 반환한다
     // Math.floor()은 소수점 이하를 버린다
     console.log(computerNum);
@@ -45,7 +45,7 @@ function play() { // 버튼 한 번 클릭시 실행되는 과정
     
 
     if(history.includes(userValue)){ // 만약 기존에 입력값이라면면
-        notifyArea.textContent = "새로운 값을 입력하세요;"
+        notifyArea.textContent = "새로운 값을 입력하세요"
         return; // 함수를 종료 ( 하단 코드 실행 불가하도록 한다 )
     }
 
@@ -76,6 +76,7 @@ function play() { // 버튼 한 번 클릭시 실행되는 과정
     
     if(chance == 0){ // 기회를 모두 소진하면
         gameOver = true; 
+        notifyArea.textContent = `정답은 ${computerNum}`
     }
 
 
@@ -91,7 +92,7 @@ function reset() {
     chance = 5;
     // 게임 다시 켜기 - play() 함수 안에서 기회 모두 소진 or 정답 일 경우 gameOver로 버튼 전원을 조작해서.
     gameOver = false;
-    notifyArea.textContent = "1~99 사이의 수를 입력하세요" // 문구 변경
+    notifyArea.textContent = "1~100 사이의 수를 입력하세요" // 문구 변경
     // 실행 버튼 재활성화
     btnPlay.disabled = false; 
     // 잔여 기회 안내문 리셋
